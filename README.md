@@ -6,9 +6,9 @@ serialize your objective-c class to JSON representable object and vice versa.
 
 ### Purpose ###
 
-* I know there`s so many good projects for serializing Custom Class to JSON representable object and vice versa.
-And I think we don`t need to develop wheel. We only need to how to use wheel! right? :D
-However! I know how the wheel works, it`s really important to think about how I can improve the wheel by creating my own.
+* I know there\`s so many good projects for serializing Custom Class to JSON representable object and vice versa.
+And I think we don\`t need to develop wheel. We only need to how to use wheel! right? :D
+However! I know how the wheel works, it\`s really important to think about how I can improve the wheel by creating my own.
 So, I wrote this code for study and fun. :)
 * Support Serialization of User define Class to JSON representable object(NSDictionary or NSArray) and vise versa.
 
