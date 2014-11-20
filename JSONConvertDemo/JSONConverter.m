@@ -67,7 +67,7 @@
         {
             id subJSONObject = [[self valueForKey:propertyName] createJSONObject];
             [tmpJSONObject setValue:(subJSONObject == nil ? [NSNull null] : subJSONObject)
-                      forKey:propertyName];
+                             forKey:propertyName];
         }
         //if property of this class is sub class of NSArray check the element
         else if([classObj isSubclassOfClass:[NSArray class]] == YES)
@@ -89,7 +89,7 @@
         {
             id val = [self valueForKey:propertyName];
             [tmpJSONObject setValue:(val == nil ? [NSNull null] : val)
-                      forKey:propertyName];
+                             forKey:propertyName];
         }
     }
     
@@ -113,6 +113,15 @@
         //set value to instance variable of this class from jonsDic using key(property name)
         for(NSString *propertyName in propertyNames)
         {
+            /*
+             check whether current object has a same property of propertyName or not.
+             if current object does not has a same property, just skip, and check next property.
+             */
+            if([propertiesAndType valueForKey:propertyName] == nil)
+            {
+                continue;
+            }
+            
             id val = [jsonDic valueForKey:propertyName];
             if([val isKindOfClass:[NSDictionary class]] == YES)
             {
